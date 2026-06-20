@@ -1,7 +1,6 @@
 const express = require("express");
 
 const app = express();
-const PORT = 3000;
 
 // Parse JSON request body
 app.use(express.json());
