@@ -1,5 +1,5 @@
 const express = require("express");
-
+require("dotenv").config();
 const app = express();
 
 // Parse JSON request body
@@ -23,7 +23,7 @@ app.post("/api/abha/callback", (req, res) => {
 app.get("/", (req, res) => {
     res.send("ABHA Callback Server Running");
 });
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    
+app.listen(process.env.PORT, () => {
+    console.log(`Server running on port ${process.env.PORT}`);
 });
